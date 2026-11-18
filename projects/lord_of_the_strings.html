@@ -4,12 +4,14 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Lord of the Strings - Arcana by HTML5 UP</title>
+		<title>Lord of the Strings - Andrew Lin's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Lord of the Strings: a guitar-playing robot with programmable strumming and palm-muting patterns. Cornell ECE 3140 final project." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/project-page.css" />
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -49,53 +51,197 @@
 
 				</div>
 
-			<!-- Main -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-4 col-12-narrower">
-								<div id="sidebar">
+				<!-- Main -->
+					<section class="wrapper style1">
+						<div class="container">
+							<div class="row gtr-200">
 
-									<!-- Sidebar -->
+								<!-- Sidebar (drops below the content on narrow screens, like the other project pages) -->
+								<div class="col-4 col-12-narrower">
+									<div id="sidebar">
 
 										<section>
-												<h3>Code</h3>
-												<p>This project was implemented in C for the KL46Z. The program was compiled in the MCUXpresso software.</p>
-												<footer>
-													<a href="https://andteklin.github.io/lord-of-the-strings/" class="button">GitHub Page</a>
-                                                    <a href="https://github.com/andteklin/lord-of-the-strings/" class="button">GitHub Repo</a>
+											<h3>Links</h3>
+											<div class="pp-side-buttons">
+												<a href="https://andteklin.github.io/lord-of-the-strings/" class="button">Read Full Technical Report</a>
+												<a href="https://github.com/andteklin/lord-of-the-strings" class="button alt">View Source Code</a>
+											</div>
+										</section>
 
-												</footer>
-											</section>
+										<section>
+											<h3>At a glance</h3>
+											<ul class="pp-facts">
+												<li><strong>Course</strong>ECE3140: Embedded Systems</li>
+												<li><strong>Board</strong>FRDM-KL46Z</li>
+												<li><strong>Language</strong>C</li>
+												<li><strong>IDE</strong>MCUXpresso</li>
+												<li><strong>Team</strong>Andrew Lin, Adin Moskowitz, Nathan Varghese</li>
+											</ul>
+										</section>
+
+										<section>
+											<h3>On this page</h3>
+											<ul class="links">
+												<li><a href="#overview">Overview</a></li>
+												<li><a href="#my-contributions">My Contributions</a></li>
+												<li><a href="#architecture">Hardware and Software Architecture</a></li>
+												<li><a href="#design">Challenges and Engineering Decisions</a></li>
+												<li><a href="#results">Testing, Results, and Lessons Learned</a></li>
+												<li><a href="#team">Team Acknowledgments</a></li>
+												<li><a href="#links">Go Deeper</a></li>
+											</ul>
+										</section>
 
 									</div>
-							</div>
-							<div class="col-8  col-12-narrower imp-narrower">
-								<div id="content">
+								</div>
 
-									<!-- Content -->
+								<!-- Content -->
+								<div class="col-8 col-12-narrower imp-narrower">
+									<div id="content" class="pp-page">
 
 										<article>
 											<header>
 												<h2>Lord of the Strings</h2>
 												<p>Automated, programmable palm-muting and strumming patterns for the guitar</p>
 											</header>
+											<p>By Andrew Lin, Nathan Varghese, and Adin Moskowitz</p>
+											<p class="pp-lede">In May 2025, I designed a robotic guitar strummer along with Nathan Varghese and Adin Moskowitz for ECE3140: Embedded Systems. This was by far one of my most ambitious projects. Dubbed the Lord of the Strings, this guitar robot implements multiple strumming patterns in addition to palm muting, a common technique used to mute the strings for a punchy feel. The project’s success would not have been possible without the mechanical expertise of my peers working in parallel as I figured out how to write all the code files. This project shows what can be done in under 30 hours of work in a team, from brainstorming to real-life conceptualization.</p>
 
-											<span class="video featured"><iframe width="560" height="315" src="https://www.youtube.com/embed/4oN9tlPXdls?si=5AtNYJgoF1ySL6Po" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
+											<!-- ===== Featured media ===== -->
+											<figure>
+												<span class="video featured"><iframe src="https://www.youtube.com/embed/4oN9tlPXdls" title="Lord of the Strings - ECE3140 Final Project" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
+												A quick overview of how we built the system and a short demo.
+											</figure>
 
-												<p>In May 2025, I designed a robotic guitar strummer along with Nathan Varghese and Adin Moskowitz for ECE3140: Embedded Systems. This was by far one of my most ambitious projects. Dubbed the Lord of the Strings, this guitar robot implements multiple strumming patterns in addition to palm muting, a common technique used to mute the strings for a punchy feel. The project’s success would not have been possible without the mechanical expertise of my peers working in parallel as I figured out how to write all the code files. This project shows what can be done in under 30 hours of work in a team, from brainstorming to real-life conceptualization.</p>
+											<!-- ===== Overview ===== -->
+											<section class="pp-section" id="overview">
+												<h3>Overview</h3>
+												<p>The <strong>Lord of the Strings</strong> is more than just a guitar strummer. It's a guitar-playing robot that drives multiple servo motors in real time to dynamically strum and palm mute strings in programmable patterns. This system demonstrates precise timing and motion control just by using simple hobby servos.</p>
+												<p>Palm muting, a technique used by advanced guitarists to dampen strings and enhance rhythmic articulation, is a key feature of this system. The integration of both palm muting and strumming actions on an acoustic guitar introduces unique mechanical and timing challenges, such as precise PWM-based servo control and tight synchronization between strumming and muting actions.</p>
+												<p>Our original goal was to program a microcontroller to control both the strumming speed and style. The current implementation allows users to switch between pre-programmed strumming styles and toggle palm muting using external buttons. To achieve precise strumming patterns, the TPM (Timer/PWM Module) is used to drive the servos and the PIT (Periodic Interrupt Timer) to schedule strumming and muting actions with precise timing.</p>
 
-											</article>
+												<figure class="pp-shot">
+													<img src="../images/lord-of-the-strings/web-20250514_233430.jpg" alt="Top-down photo of the robot clamped to the guitar" width="1400" height="1050" loading="lazy" />
+												</figure>
+											</section>
 
+											<!-- ===== My contributions ===== -->
+											<section class="pp-section" id="my-contributions">
+												<h3>My Contributions</h3>
+												<p>I was largely responsible for designing the software architecture of the system, with some help from ECE3140 lab materials on timer interrupts and system clock management. 
+													This involved sending two hardware PWM signals out to control two different servos, one for strumming and one for palm muting using the Timer PWM Module (TPM).
+													A scheduler was created using one FSM which combines strumming and muting motions with predefined durations.
+													GPIO interrupts were also used to receive user input, such as for switching the pattern and toggling the palm muting servo.
+												</p>
+											</section>
+
+											<!-- ===== Architecture ===== -->
+											<section class="pp-section" id="architecture">
+												<h3>Hardware and Software Architecture</h3>
+
+												<figure class="pp-shot">
+													<img src="../images/lord-of-the-strings/system-diagram.jpg" alt="System diagram: a 5 volt supply powers the FRDM board and two servos; the board drives the strummer servo and the string-muter servo and reads four buttons for tempo up, tempo down, strum pattern, and toggle muter" width="1274" height="786" loading="lazy" style="max-width: 80%;" />
+												</figure>
+
+												<h4>Mechanical Approach</h4>
+												<p>This servo-controlled guitar robot integrates both strumming motion and palm muting through a compact mechanical system consisting of three main components. First, the <strong>mounting structure</strong> consists of a PLA-printed plate secured near the bridge of the guitar using two adjustable clamps. This plate serves as the base for securing two hobby servos: one for <strong>strumming</strong> and one for <strong>muting</strong>.</p>
+												<p>The <strong>strumming servo</strong> is attached to a PLA-printed arm with a clamp for the guitar pick. This arm is designed to sweep across all six strings in upstroke/downstroke motions.</p>
+												<p>The <strong>muting servo</strong> uses a 3D-printed linear actuator mechanism that moves a horizontal bar up and down to simulate palm muting. This linear actuator converts rotary servo motion to linear motion using a gear connected to a linear bar. The bar contains a damping material (felt or foam pad) to mute the strings.</p>
+
+												<figure class="pp-shot">
+													<img src="../images/lord-of-the-strings/web-20250514_233438.jpg" alt="Close-up of the strumming arm and pick above the strings, with the clamped servo mount" width="1400" height="1050" loading="lazy" />
+												</figure>
+
+												<h4>Electrical Approach</h4>
+												<p>The system is powered by a 5V power supply that feeds two MG90S hobby servos and the FRDM-KL46Z board. Each servo's signal is driven by TPM-generated PWM outputs via the GPIO pins. Four push buttons are wired between ground and the internal pull-up resistors on the GPIO pins, along with a 0.1 µF capacitor for debouncing presses. These buttons control the tempo, pattern, and mute toggle.</p>
+
+												<h4>Software Approach</h4>
+												<p>Continuous, hardware-driven PWM signaling is used for servo control through the KL46Z's <strong>TPM (Timer/PWM Module)</strong>. This module is standalone and offloaded from the CPU, resulting in continuous servo operation and parallel processing on the CPU. Initially, the team was inspired by Lab 2's implementation of an assembly-level PWM delay to achieve delay precision. However, the discovery of the TPM connected to certain GPIO ports seemed more promising and reliable as a hardware implementation of delays, as well as maintained continuous PWM signals without using the CPU. An implementation of PWM using TPM can be found in <code>pwm.c</code>.</p>
+												<p>The final design involves one FSM defined by a <code>ComboStep[]</code> array (pattern), unifying strumming and muting motions under one schedule. The schedule contains <code>ComboStep</code> steps that control the strumming state (<code>StrumState</code>), muting state (<code>MuteState</code>), and duration of the step. As defined in <code>strummer.h</code>, the <code>StrumState</code> enumeration controls the strumming servo position and consists of three possible states: <code>STRUM_DOWN</code>, <code>STRUM_UP</code>, and <code>REST</code>. In the same header file, there are three possible <code>MuteState</code> states that control the position of the mute bar: <code>MUTE_NOCHANGE</code> (which is the default state if no state is defined at instantiation of <code>Step</code>), <code>MUTE_ON</code>, and <code>MUTE_OFF</code>.</p>
+												<p>The PIT timer is configured to trigger an interrupt every 10ms, serving as the clock for the scheduling of strumming/muting steps. Inside the interrupt service routine (ISR), the scheduler periodically checks whether the current <code>ComboStep</code> is complete by checking <code>remaining_ms</code>. If there is still time left (&gt;10 ms), then this variable is decremented by 10ms. Once the duration has been fulfilled, it advances to the next step in the pattern by calling <code>strummer_update()</code>, which updates the global states and variables for the step counter and duration. This acts as a real-time task scheduling algorithm, dealing with multiple real-time processes and context switching to other states by a defined schedule without necessarily busy-waiting on the CPU.</p>
+												<p>The onboard buttons are used to toggle between different programmed styles, palm mute, and change tempo. Using the GPIO ISR, interrupts are fired on the falling edge (i.e. when the button is pressed and sending the signal to ground). These interrupts trigger the specific toggles as mentioned earlier.</p>
+
+												<figure class="pp-shot">
+													<img src="../images/lord-of-the-strings/classic-pattern.png" alt="Musical notation of the classic 4/4 strumming pattern with down and up strum arrows and an eighth rest" width="3258" height="309" loading="lazy" />
+												</figure>
+											</section>
+
+											<!-- ===== Design decisions & challenges ===== -->
+											<section class="pp-section" id="design">
+												<h3>Key Technical Challenges and Engineering Decisions</h3>
+
+												<p>Major challenges were faced with configuration of the hardware timer interrupts and system clock for generating the desired PWM signal for the servos. Eventually, we were able to calculate the correct parameters for configuring the timer that controls the hardware PWM signal.</p>
+
+												<h4>Pulse-Width Modulation Using Timer/PWM Module</h4>
+												<p>Sending an accurate PWM signal to the servos was a primary goal of this project. To debug the signal, an oscilloscope was hooked up to the PWM signals on pins PTB18/PTB19, measuring the period, frequency, and pulse width. Early on, there were issues deriving the correct clock period for the TPM module, and consequently the PWM signal.</p>
+												<p>In theory, the external oscillator is more reliable, as the core clock could potentially be affected by CPU processes. Thus, different base clock frequencies were tested with the TPM module, including the core clock and the external 8 MHz crystal oscillator. However, using the external oscillator did not produce any signal. The core clock remained the only viable option.</p>
+												<p>Initially, TPM had been set up with a 20.97 MHz core clock base and a 128 prescaler, producing tick division values that were not necessarily integers and had low resolution with higher prescalers.</p>
+												<figure class="pp-shot">
+													<img src="../images/lord-of-the-strings/pwm-scope-20mhz.png" alt="Oscilloscope capture of the early servo PWM signal at 50.29 Hz" width="480" height="234" loading="lazy" style="max-width: 70%;" />
+												</figure>
+												<p>Instead, changing the program to run on a 48 MHz core clock and a 64 prescaler yielded more accurate results, providing a wider range of precise duty cycles and a modulus value of ~15,000 (well under the 16-bit limit of 65,535). However, the actual core clock was running at 47.972352 MHz, so the modulus and CnV values were not exact integers and had to be rounded, slightly reducing accuracy.</p>
+												<p>The initial <code>MOD</code> value of 14991 (derived from the formula) produced an experimental PWM frequency of 50.3 Hz, which was slightly off. Using the oscilloscope, the frequency and pulse width were measured in real-time, and the <code>MOD</code> value was adjusted via trial and error to achieve a near-perfect 50 Hz frequency, as shown below.</p>
+												<figure class="pp-shot">
+													<img src="../images/lord-of-the-strings/pwm-scope-48mhz.png" alt="Oscilloscope capture of the tuned servo PWM signal at 49.98 Hz with a 20.01 ms period" width="480" height="234" loading="lazy" style="max-width: 70%;" />
+												</figure>
+
+												<h4>PIT Interrupts</h4>
+												<p>Originally, we mistakenly assumed that the PIT timer used the full 48 MHz system core clock. As a result, strumming patterns played at half speed—a quarter note at 120 BPM played as if at 60 BPM. Dividing the system core clock by two to reflect the 24 MHz bus clock (used by PIT) corrected the tempo issues.</p>
+
+												<h4>Support for Multiple Patterns and Button Toggles</h4>
+												<p>With accurate timing established by the PIT scheduler, the next goal was enabling pattern switching and muting via buttons. Buttons connected to port interrupts were used to toggle between patterns and muting states.</p>
+												<p>Initially, button presses failed due to incorrect wiring to high voltage. Port interrupts trigger on a connection to ground, so the button was rewired with one side to the port and the other to ground. While this fixed the logic, multiple presses were sometimes registered for a single press. A capacitor was added in parallel for debouncing, which reduced—though did not eliminate—the issue. Nevertheless, the buttons functioned as needed for switching between strumming patterns.</p>
+
+												<h4>Mechanical Challenges</h4>
+												<p>One of the main challenges we faced in this project was refining the design of the strumming arm. It took several iterations to resolve issues related to mechanical noise, instability, and ensuring the arm had the proper range of motion without interfering with the muting components. We also encountered clearance issues with the pick, as it initially couldn't reach the strings—this required careful adjustments to address positioning and reach. Assembling the servo mounts onto the main mounting plate was also a challenge; it took time to finalize optimal locations for functionality and support.</p>
+											</section>
+
+											<!-- ===== Results ===== -->
+											<section class="pp-section" id="results">
+												<h3>Testing, Results, and Lessons Learned</h3>
+
+												<p>At least three different strumming/muting combo patterns were tested and produced the expected programmed patterns. Based on the oscilloscope measurements, the PWM signal produced with the expected modulus value for the timer did not produce the exact expected frequency. Though slightly off, it was within less than 1% error. We adjusted for this by changing the modulus value by a few counts.</p>
+
+												<h4>Lessons Learned</h4>
+												<p>I wish we had more accurately measured where the servo mounts needed to go beforehand, as the mounting plate took a long time to print—making redesigns and reprints time-consuming. Additionally, the guitar neck is not exactly flat, but rounded. This became apparent when our muting mechanism only effectively muted the top three strings, less so on the bottom strings, because they are positioned vertically lower due to the guitar’s design. We also had to CAD a custom servo mount to ensure the servo stood upright rather than laterally for proper strumming motion.</p>
+												<p>One thing I wish we had known earlier was the bioacoustic effect of the servo and pick—the vibrations produced a surprisingly loud mechanical noise. Unlike strumming by hand, where your fingers absorb much of the vibration and you mostly hear the strings, the strumming arm amplified both the string and mechanical sounds. Understanding that earlier would have informed our material and design choices for quieter operation. These experiences highlighted the importance of planning for mechanical tolerances, acoustic behavior, and clearance early in the design process.</p>
+
+												<h4>Future Improvements</h4>
+												<p>While the final system successfully allows the user to control muting and switching between pre-programmed patterns, there are several opportunities for improvements, both in user interface design and in enhancing the realism and reliability of the strumming/muting mechanism.</p>
+												<p>Momentum in the strumming arm caused the strumming servo to keep moving back and forth (jitterring) within ~5 degrees of the expected position. Ideally, the arm should simply remain in a single position for a specified duration, but the arm was not sufficiently damped to prevent the jitter from ocurring.</p>
+											</section>
+
+											<!-- ===== Team ===== -->
+											<section class="pp-section" id="team">
+												<h3>Team Acknowledgments</h3>
+												<p>We organized tasks into three main categories: mechanical design, electrical setup, and software design.</p>
+												<ul>
+													<li><strong>Andrew</strong> primarily worked on coding and debugging the software to achieve the desired servo motions and handle button inputs.</li>
+													<li><strong>Adin</strong> focused on the mechanical design for the string muting system and also contributed to code debugging and testing servo signal generation.</li>
+													<li><strong>Nathan</strong> designed the servo-controlled strumming arm, the servo mount, and the mounting plate that clamps onto the guitar. He also implemented strumming pattern logic and helped clean up and organize the codebase.</li>
+												</ul>
+												<p>We drew inspiration for the mounting plate and strumming motion from this guide: <a href="https://www.instructables.com/AutoStrummer/">AutoStrummer – Instructables</a></p>
+												<p>We also used AI coding assistants like <strong>ChatGPT</strong> and <strong>GitHub Copilot</strong> to help write and debug parts of the code. These tools provided helpful high-level guidance and structure, but they lacked specific knowledge of hardware modules like TPM and clock configuration. As a result, significant effort was still required to debug, tune the PWM signals, and achieve reliable servo behavior.</p>
+											</section>
+
+											<!-- ===== Links ===== -->
+											<section class="pp-section" id="links">
+												<h3>Go Deeper</h3>
+												<p>The original technical report from Spring 2025 for the ECE3140 final project is linked below. In addition, you can explore the source code and see how you can program a strumming pattern!</p>
+												<div class="pp-actions">
+													<a href="https://andteklin.github.io/lord-of-the-strings/" class="button">Read Full Technical Report</a>
+													<a href="https://github.com/andteklin/lord-of-the-strings" class="button alt">View Source Code</a>
+												</div>
+											</section>
+
+										</article>
+
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</section>
+					</section>
 
-			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
 						<div class="row">
 							<section class="col-3 col-6-narrower col-12-mobilep">
 								<h3>Links to Stuff</h3>

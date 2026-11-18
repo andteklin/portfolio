@@ -1,0 +1,69 @@
+/*
+	Shared project case-study styles for the Arcana portfolio.
+	Loaded after main.css by projects/PiPacer.html and projects/lord_of_the_strings.html.
+	All rules are scoped under .pp-page or use a pp- prefix so nothing leaks to other pages.
+	(pp- is a historical prefix from PiPacer, the first page built on this system.)
+	Colors/fonts come from Arcana (accent #37c0fb).
+*/
+
+.pp-page section.pp-section { margin-bottom: 2.5em; }
+.pp-page h3 { border-bottom: solid 2px #e0e0e0; padding-bottom: 0.3em; }
+.pp-page h4 { margin: 1.5em 0 0.4em 0; font-size: 1.05em; font-weight: 600; }
+
+.pp-page article p,
+.pp-page article li { font-size: 0.85em; line-height: 1.7em; }
+
+.pp-lede { font-size: 1em !important; color: #555; }
+
+/* Buttons row */
+.pp-actions { margin: 0 0 2em 0; }
+.pp-actions .button { margin: 0 0.5em 0.6em 0; }
+
+/* Figures */
+.pp-page figure { margin: 0 0 1.75em 0; text-align: center; }
+.pp-page figure img,
+.pp-page figure video { max-width: 100%; height: auto; border-radius: 5px; }
+.pp-page figure.pp-shot img { border: solid 1px #e0e0e0; background: #fff; }
+.pp-page figcaption { font-size: 0.75em; font-style: italic; color: #777; margin-top: 0.6em; line-height: 1.4em; }
+
+.pp-fig-row { display: grid; gap: 1em; align-items: start; margin-bottom: 0.5em; }
+.pp-fig-row.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pp-fig-row.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pp-fig-row figure { margin: 0 0 1em 0; }
+@media screen and (max-width: 736px) {
+	.pp-fig-row.cols-2, .pp-fig-row.cols-3 { grid-template-columns: 1fr; }
+}
+
+/* Contribution callouts */
+.pp-callout {
+	background: #fff;
+	border: solid 1px #e0e0e0;
+	border-left: solid 0.35em #37c0fb;
+	border-radius: 5px;
+	padding: 1em 1.25em 0.25em 1.25em;
+	margin-bottom: 1.5em;
+}
+.pp-callout h4 { margin-top: 0; }
+.pp-callout ul { margin-bottom: 1em; }
+.pp-callout.pp-team-wide { border-left-color: #bbb; }
+
+.pp-todo {
+	background: #fff8e1;
+	border: dashed 1px #e0a800;
+	border-radius: 3px;
+	padding: 0.1em 0.5em;
+}
+
+/* Results table */
+.pp-page .table-wrapper { overflow-x: auto; margin-bottom: 1.5em; }
+.pp-page table.default { margin-bottom: 0; font-size: 0.8em; }
+.pp-page table.default th,
+.pp-page table.default td { padding: 0.55em 0.8em; text-align: left; vertical-align: top; }
+.pp-page table.default th { font-weight: 600; border-bottom: solid 2px #e0e0e0; }
+
+/* Sidebar facts */
+#sidebar .pp-facts { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
+#sidebar .pp-facts li { font-size: 0.8em; padding: 0.4em 0; border-top: solid 1px #e8e8e8; }
+#sidebar .pp-facts li:first-child { border-top: 0; }
+#sidebar .pp-facts strong { display: block; color: #888; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.05em; }
+#sidebar .pp-side-buttons .button { display: block; text-align: center; margin: 0 0 0.6em 0; }

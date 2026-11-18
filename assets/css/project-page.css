@@ -67,3 +67,30 @@
 #sidebar .pp-facts li:first-child { border-top: 0; }
 #sidebar .pp-facts strong { display: block; color: #888; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.05em; }
 #sidebar .pp-side-buttons .button { display: block; text-align: center; margin: 0 0 0.6em 0; }
+
+/* Verbatim report excerpts (used on the Smart Home Controller page) */
+.pp-page blockquote.pp-excerpt {
+	border-left: solid 0.35em #37c0fb;
+	background: #fff;
+	margin: 0 0 1.5em 0;
+	padding: 0.9em 1.25em 0.4em 1.25em;
+	font-style: normal;
+}
+.pp-page blockquote.pp-excerpt p { margin-bottom: 0.8em; }
+.pp-page .pp-source { display: block; font-size: 0.7em; color: #888; margin: 0 0 1em 0; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Expandable detail blocks */
+.pp-page details.pp-details { border: solid 1px #e0e0e0; border-radius: 5px; background: #fff; margin: 0 0 1em 0; padding: 0 1.25em; }
+.pp-page details.pp-details > summary { cursor: pointer; font-weight: 600; font-size: 0.85em; padding: 0.9em 0; }
+.pp-page details.pp-details[open] > summary { border-bottom: solid 1px #e8e8e8; margin-bottom: 1em; }
+
+/* Code blocks */
+.pp-page pre.pp-code { font-size: 0.75em; line-height: 1.5em; background: #f6f6f6; border: solid 1px #e0e0e0; border-radius: 5px; padding: 0.9em 1em; overflow-x: auto; margin: 0 0 1.25em 0; }
+
+/* Wide diagrams: scroll sideways on phones instead of shrinking to unreadable */
+.pp-page .pp-diagram { overflow-x: auto; }
+.pp-page .pp-diagram img { display: block; width: 100%; height: auto; }
+@media screen and (max-width: 736px) {
+	.pp-page .pp-diagram img { min-width: 640px; }
+}
+.pp-page figure video { width: 100%; }

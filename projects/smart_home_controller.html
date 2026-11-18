@@ -4,12 +4,14 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Smart Home Controller</title>
+		<title>Smart Home Controller - Andrew Lin's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Smart Home Controller: SYSEN 5410 final project" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/project-page.css" />
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -53,39 +55,267 @@
 				<section class="wrapper style1">
 					<div class="container">
 						<div class="row gtr-200">
+
+							<!-- Sidebar -->
 							<div class="col-4 col-12-narrower">
 								<div id="sidebar">
 
-									<!-- Sidebar -->
+									<section>
+										<h3>At a glance</h3>
+										<ul class="pp-facts">
+											<li><strong>Course</strong>SYSEN 5410 (Final Project)</li>
+											<li><strong>Team</strong>Individual project (Andrew Lin)</li>
+											<li><strong>Controllers</strong>Raspberry Pi Pico 2 W (LIC Pico) and Raspberry Pi Pico W (CSAC Pico)</li>
+											<li><strong>Sensor</strong>BME280</li>
+											<li><strong>Language</strong>MicroPython</li>
+											<li><strong>Report date</strong>May 16, 2026</li>
+										</ul>
+										<p class="pp-todo"><small>TODO: Confirm the full course title for SYSEN 5410 and whether it is acceptable to list it here.</small></p>
+									</section>
 
-										<section>
-												<h3>Code</h3>
-												<p>This project was implemented in C for the KL46Z. The program was compiled in the MCUXpresso software.</p>
-												<footer>
-													<a href="https://andteklin.github.io/lord-of-the-strings/" class="button">GitHub Page</a>
-                                                    <a href="https://github.com/andteklin/lord-of-the-strings/" class="button">GitHub Repo</a>
+									<section>
+										<h3>Sections</h3>
+										<ul class="links">
+											<li><a href="#intro">Introduction</a></li>
+											<li><a href="#my-contributions">My Contributions</a></li>
+											<li><a href="#architecture">System Architecture</a></li>
+											<li><a href="#hardware">Hardware</a></li>
+											<li><a href="#software">Software</a></li>
+											<li><a href="#demo">Demonstration</a></li>
+											<li><a href="#results">Testing and Results</a></li>
+											<li><a href="#conclusion">Conclusion and Future Work</a></li>
+										</ul>
+									</section>
 
-												</footer>
-											</section>
-
-									</div>
+								</div>
 							</div>
-							<div class="col-8  col-12-narrower imp-narrower">
-								<div id="content">
 
-									<!-- Content -->
+							<!-- Content -->
+							<div class="col-8 col-12-narrower imp-narrower">
+								<div id="content" class="pp-page">
 
-										<article>
-											<header>
-												<h2>Smart Home Controller</h2>
-												<p>Automated, programmable palm-muting and strumming patterns for the guitar</p>
-											</header>
+									<article>
+										<header>
+											<h2>Smart Home Controller</h2>
+											<p>SYSEN 5410 Final Project</p>
+										</header>
 
-											<span class="video featured"><iframe width="560" height="315" src="https://www.youtube.com/embed/4oN9tlPXdls?si=5AtNYJgoF1ySL6Po" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
+										<p class="pp-todo"><strong>TODO:</strong> Write a one-line tagline for the header above (replaces the placeholder "SYSEN 5410 Final Project").</p>
 
-												<p>In May 2025, I designed a robotic guitar strummer along with Nathan Varghese and Adin Moskowitz for ECE3140: Embedded Systems. This was by far one of my most ambitious projects. Dubbed the Lord of the Strings, this guitar robot implements multiple strumming patterns in addition to palm muting, a common technique used to mute the strings for a punchy feel. The project’s success would not have been possible without the mechanical expertise of my peers working in parallel as I figured out how to write all the code files. This project shows what can be done in under 30 hours of work in a team, from brainstorming to real-life conceptualization.</p>
+										<span class="video featured"><iframe src="https://www.youtube.com/embed/_MRbnAwvUnI" title="Smart Home Controller Demo" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
 
-											</article>
+										<section class="pp-section" id="intro">
+											<h3>Introduction</h3>
+											<blockquote class="pp-excerpt">
+												<p>This project implements a smart home controller that simulates user control over certain subsystems in a home, such as lighting and climate. This system acts as a smart thermostat and allows the user to control smart bulbs in their home.</p>
+											</blockquote>
+											<span class="pp-source">From my final report, Section 1 (p. 1)</span>
+											<blockquote class="pp-excerpt">
+												<p>The primary motivation for the system came from the limitations of controlling smart home lighting appliances. Specifically, it is difficult to find a consumer-brand smart wall switch that does not require hot-wiring directly into the wall. The ecosystem surrounding the Raspberry Pi Pico 2 W microcontroller only requires 5V DC power for general operation, making it suitable for plugging the system into a wall outlet with an AC adapter. This inspired me to build a system with physical control of smart home lighting like TP-Link bulbs, bridging the gap between fully digital control of the lights and analog control of the lights via a wall switch.</p>
+											</blockquote>
+											<span class="pp-source">From my final report, Section 1 (p. 1)</span>
+											<p class="pp-todo"><strong>TODO:</strong> Write a 2&ndash;3 sentence recruiter-facing overview (what it does, why you built it, the main engineering challenge) to replace or sit above these excerpts. The report's Section 1 (p. 1) has the material to adapt.</p>
+										</section>
+
+										<section class="pp-section" id="my-contributions">
+											<h3>My Contributions</h3>
+											<p class="pp-todo"><strong>TODO:</strong> This was an individual project, so describe your own role and decisions in your own words: hardware design and wiring, firmware for both Picos, the control algorithm and filtering, UDP communication, and system testing. Pointing to specific design decisions (e.g. report &sect;3.1 on rate-limiting the LCD, &sect;3.2.2 on predictive cutoff and hysteresis) makes this section far stronger than a list of tasks.</p>
+										</section>
+
+										<section class="pp-section" id="architecture">
+											<h3>System Architecture</h3>
+											<figure>
+												<a class="pp-diagram" href="../images/smart-home-controller/system_diagram.png" target="_blank" rel="noopener" title="Open the full-size diagram in a new tab" style="display:block;overflow-x:auto;">
+													<img src="../images/smart-home-controller/system_diagram.png" alt="Smart Home Controller System Diagram showing the LIC Pico (potentiometers, light toggle button, debouncing and EMA filtering, main controller, Wi-Fi and UDP link to the TP-Link bulb) connected over UDP to the CSAC Pico (BME280 sensor, EMA filter, error computation, temperature state estimation, heater control on/off logic, relay, power supply and heated pouch)." width="4020" height="2310" loading="lazy" />
+												</a>
+												<figcaption>Figure 1: System Diagram (click to open full size)</figcaption>
+											</figure>
+											<p class="pp-todo"><strong>TODO:</strong> Add alt-text/short caption approved by you if you want a different description than the one currently used for screen readers.</p>
+
+											<blockquote class="pp-excerpt">
+												<p>There are two subsystems: one that controls lighting, and one that controls climate.</p>
+												<p>The Climate Sensing &amp; Actuation Controller (CSAC Pico) is responsible for sensing, logic, and actuation of the system, while the Lighting &amp; Interface Controller (LIC Pico) is responsible for sending the setpoint input to the CSAC Pico over Wi-Fi.</p>
+												<p>The system diagram in Figure 1 is a high-level overview of the system, with the LIC Pico responsible for input logic and lighting control on the left and the CSAC Pico that handles sensing and actuation on the right.</p>
+											</blockquote>
+											<span class="pp-source">From my final report, Section 1 (pp. 1&ndash;2)</span>
+
+											<details class="pp-details">
+												<summary>Inter-Pico communication (report &sect;2.3)</summary>
+												<blockquote class="pp-excerpt">
+													<p>Both Picos are connected to the Wi-Fi network with static IP addresses such that both Picos can talk to each other and reliably connect with each other over the same Wi-Fi router every time the system turns on. UDP packets are selected as connectionless protocols are preferred to prevent the main system thread from hanging and otherwise waiting on TCP linking.</p>
+												</blockquote>
+												<span class="pp-source">From my final report, Section 2.3 (p. 5)</span>
+											</details>
+											<p class="pp-todo"><strong>TODO:</strong> Write a short "how the pieces fit together" paragraph for a non-specialist reader, walking through one user action end to end (e.g. turning the setpoint knob to the heater switching on).</p>
+										</section>
+
+										<section class="pp-section" id="hardware">
+											<h3>Hardware</h3>
+											<div class="pp-fig-row cols-2">
+												<figure class="pp-shot">
+													<img src="../images/smart-home-controller/IMG_8505_web.jpg" alt="LIC Pico breadboard with LED bar graph, LCD display, pushbutton, potentiometers and indicator LEDs" loading="lazy" />
+													<figcaption>Figure 2: LIC Pico Hardware</figcaption>
+												</figure>
+												<figure class="pp-shot">
+													<img src="../images/smart-home-controller/IMG_8507_web.jpg" alt="CSAC Pico breadboard with relay module and indicator LEDs next to the insulated heating pouch" loading="lazy" />
+													<figcaption>Figure 3: CSAC Pico Hardware</figcaption>
+												</figure>
+											</div>
+											<figure class="pp-shot">
+												<img src="../images/smart-home-controller/IMG_8498_cropped_web.jpg" alt="Both breadboards side by side: the LIC Pico with LCD on the left and the CSAC Pico with relay on the insulated pouch on the right" loading="lazy" />
+												<figcaption>Figure 4: Physical Hardware of Smart Home Controller</figcaption>
+											</figure>
+
+											<details class="pp-details">
+												<summary>Lighting &amp; Interface Controller (LIC Pico)</summary>
+												<blockquote class="pp-excerpt">
+													<p>For physical input, a normally open pushbutton button (the yellow button) is used to toggle the smart bulb on or off. To detect button presses, the GPIO pin 15 is internally pulled up connected to one of the button terminals and the terminal is connected to ground. When the button creates contact between both terminals, the GPIO pin detects a LOW signal and then inverts the state of the bulb.</p>
+												</blockquote>
+												<span class="pp-source">From my final report, Section 2.1.1 (p. 3)</span>
+												<blockquote class="pp-excerpt">
+													<p>The user also receives indicators of various system statuses via the LCD display and indicator LEDs. The LCD display is connected to GPIO 16 and 17 using the I2C0 bus. This displays the current temperature in the pouch, the setpoint temperature, whether the light bulb is on/off, and the brightness of the light bulb.</p>
+												</blockquote>
+												<span class="pp-source">From my final report, Section 2.1.2 (p. 3)</span>
+												<div class="table-wrapper">
+													<table class="default">
+														<caption>Table 1: Lighting and Interface Controller (LIC Pico) Pinout</caption>
+														<thead><tr><th>GPIO Pin</th><th>Function / Name</th><th>Description</th></tr></thead>
+														<tbody>
+															<tr><td>GP2-GP12</td><td>LED BAR</td><td>LED bar graph segments 1-10</td></tr>
+															<tr><td>GP20</td><td>LED IDI COOL</td><td>Cooling indicator LED</td></tr>
+															<tr><td>GP21</td><td>LED IDI HEAT</td><td>Heating indicator LED</td></tr>
+															<tr><td>GP22</td><td>LED IDI TEMP</td><td>HVAC system active indicator LED</td></tr>
+															<tr><td>GP28</td><td>LED IDI UDP</td><td>UDP receive indicator LED</td></tr>
+															<tr><td>GP26</td><td>POT LED_CTRL</td><td>Analog input for LED brightness control</td></tr>
+															<tr><td>GP27</td><td>POT TEMP_CTRL</td><td>Analog input for temperature setpoint</td></tr>
+															<tr><td>GP15</td><td>BTN LIGHT_CTRL</td><td>Pushbutton for toggling smart bulbs</td></tr>
+															<tr><td>GP16/17</td><td>LCD SDA/SCL</td><td>I2C data/clock line for LCD</td></tr>
+														</tbody>
+													</table>
+												</div>
+												<span class="pp-source">Table 1, final report p. 4</span>
+											</details>
+
+											<details class="pp-details">
+												<summary>Climate Sensing &amp; Actuation Controller (CSAC Pico)</summary>
+												<blockquote class="pp-excerpt">
+													<p>An insulated pouch with a resistive heating pad was selected to simulate the climate conditions of an insulated home environment. Thus, heat loss is very minimal and heat escapes quite slowly over time. However, turning on the heater for even just under a minute raises the internal temperature by a few degrees, which is ideal for demonstration purposes and quick testing of the system response.</p>
+												</blockquote>
+												<span class="pp-source">From my final report, Section 2.2.1 (p. 4)</span>
+												<blockquote class="pp-excerpt">
+													<p>To measure temperature, the BME280 sensor was selected.  This is a common prototype-purpose environmental sensor that comes with humidity, temperature, and pressure sensing all in one package. It is able to detect changes in temperature pretty rapidly and sample quite accurately using the two-wire I2C bus and 3.3V power.</p>
+												</blockquote>
+												<span class="pp-source">From my final report, Section 2.2.2 (p. 4)</span>
+												<blockquote class="pp-excerpt">
+													<p>The controller outputs a HIGH or LOW signal via GPIO 15 depending on whether the system determines that the heater should be on or not. This signal is wired directly to the signal pin on the 5V relay breakout board, which uses a 5V relay similar to the one found in the kit. 5V power from VBUS is used to provide the power needed to actuate the relay. The normally open contact of the relay is wired up to the positive end of the resistive heating pad, and the common contact is wired up to a power supply that is set to 6.4V 2.34A, according to the spec of the heating pad. When the relay is ON, the normally open contact is tied to the common contact which starts the flow of current to the heating pad until the system decides to turn off the heater.</p>
+												</blockquote>
+												<span class="pp-source">From my final report, Section 2.2.3 (p. 5)</span>
+												<div class="table-wrapper">
+													<table class="default">
+														<caption>Table 2: Climate Sensing &amp; Actuation Controller (CSAC Pico) Pinout</caption>
+														<thead><tr><th>GPIO Pin</th><th>Function / Name</th><th>Role in System</th></tr></thead>
+														<tbody>
+															<tr><td>GP12/13</td><td>BME280 SDA/SCL</td><td>I2C data/clock line for environmental sensing</td></tr>
+															<tr><td>GP3</td><td>BME280 +3V3</td><td>Sensor power supply (3.3V)</td></tr>
+															<tr><td>GP15</td><td>HEATER RLY</td><td>Relay control output for heating actuator</td></tr>
+															<tr><td>VBUS</td><td>RLY +5V</td><td>Relay module power input (5V)</td></tr>
+															<tr><td>GP19</td><td>LED IDI TEMP</td><td>HVAC system active indicator LED</td></tr>
+															<tr><td>GP18</td><td>LED IDI HEAT</td><td>Heating active indicator LED</td></tr>
+															<tr><td>GP16</td><td>LED IDI COOL</td><td>Cooling active indicator LED</td></tr>
+															<tr><td>GP21</td><td>LED IDI UDP</td><td>UDP receive indicator LED</td></tr>
+														</tbody>
+													</table>
+												</div>
+												<span class="pp-source">Table 2, final report p. 5</span>
+											</details>
+											<p class="pp-todo"><strong>TODO:</strong> Write a short note on the hardware design decision you are proudest of (e.g. relay isolation, insulated-pouch test setup) and any wiring or debugging problems you hit. The report (&sect;2) describes what was built but not what went wrong.</p>
+										</section>
+
+										<section class="pp-section" id="software">
+											<h3>Software</h3>
+
+											<h4>Lighting &amp; Interface Controller</h4>
+											<blockquote class="pp-excerpt">
+												<p>The LIC Pico contains software to process user inputs, sync system state across the Pico and smart bulb, and control the smart bulb over UDP. The main loop is largely event-driven, waiting for user input and/or new temperature readings from the CSAC to update the indicators. This event-driven loop is implemented to prevent quick updates of the I2C display, which fails when too many events are triggered and when it tries to update too quickly. For example, when the potentiometer value changed, the LCD would update at the loop frequency, which is too quick and bottlenecks the I2C bus, eventually causing glitchy characters to appear on the LCD. Thus, the LCD and indicator updates were rate limited as periodic tasks to prevent quick event-driven changes such as changing a potentiometer apart from some resting position.</p>
+											</blockquote>
+											<span class="pp-source">From my final report, Section 3.1 (p. 6)</span>
+
+											<details class="pp-details">
+												<summary>Potentiometer filtering and mapping (report &sect;3.1.1)</summary>
+												<blockquote class="pp-excerpt">
+													<p>Inputs from the potentiometer are filtered through a three step process. First, the 4 most recent values of the ADC are averaged. Then, this average value is mapped from a 16-bit ADC value to a brightness range of 0-100 or temperature range of 59-86 degrees Fahrenheit. Then, the input is passed through a exponential moving average filter that takes the previous filtered value and takes in the value of the current step and applies a weighted average between the two values, producing a filtered value for the current time step. 0.2 was chosen to smooth out the input signal while also providing a clean balance of adapting to the latest input values.</p>
+												</blockquote>
+<pre class="pp-code"><code>def _ema(prev, new, alpha):
+    if prev is None:
+        return new
+    return alpha * new + (1 - alpha) * prev
+
+def map_value(x, in_min, in_max, out_min, out_max):
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min</code></pre>
+												<span class="pp-source">From my final report, Section 3.1.1 (p. 7)</span>
+											</details>
+
+											<h4>Climate Sensing &amp; Actuation Controller</h4>
+											<blockquote class="pp-excerpt">
+												<p>The CSAC Pico uses the MicroPython machine.I2C interface to read the BME280 registers every 200 ms. Raw temperature values are converted to °C using the sensor’s calibration coefficients, then pushed into a light EMA filter with a weight of 0.9 to the latest sensor reading. This weight was chosen to reflect the fast-acting heater placed inside the pouch and allow the system to respond quickly to changes in heat while also reducing noise in the reading to some degree. This temperature is then converted to Fahrenheit for the control algorithm and display.</p>
+											</blockquote>
+											<span class="pp-source">From my final report, Section 3.2.1 (p. 9)</span>
+
+											<blockquote class="pp-excerpt">
+												<p>After the main loop of the CSAC reads the filtered temperature, the future state of the temperature is estimated using a time derivative, predicting 2 seconds into the future and cutting off the heater when the measured temperature is close to the setpoint. This is used in conjunction with an implementation of deadband and hysteresis, cutting off the heater before reaching a certain difference below the setpoint and turning on the heater before reaching a certain difference above the setpoint. The implementation details can be seen in the snippet below:</p>
+											</blockquote>
+											<span class="pp-source">From my final report, Section 3.2.2 (p. 9)</span>
+<pre class="pp-code"><code># 1. Predictive cutoff only when close to setpoint
+if heater_on and temp >= setpoint - 0.5:
+    if predicted_temp >= setpoint:
+        if time.ticks_diff(now, last_on_time) > MIN_ON_TIME * 1000:
+            heater_on = False
+            last_off_time = now
+# 2. Hysteresis ON logic
+if not heater_on and temp <= setpoint - HEAT_ON_DELTA:
+    if time.ticks_diff(now, last_off_time) > MIN_OFF_TIME * 1000:
+        heater_on = True
+        last_on_time = now</code></pre>
+											<span class="pp-source">Code snippet from my final report, Section 3.2.2 (p. 9)</span>
+
+											<details class="pp-details">
+												<summary>Feedback control and filtering (report &sect;4.5&ndash;4.6)</summary>
+												<blockquote class="pp-excerpt">
+													<p>The system uses an exponential moving average filter to smooth temperature readings from the BME280 before they are used in the control loop. This same EMA filter is also used on the potentiometer inputs to smooth the brightness and temperature inputs before they hit the control loop. The EMA filter assists in smoothing out input signals and preventing jitter in brightness and temperature updates, so as to reduce unnecessary wireless transmission of noisy data. In addition, the future temperature of the pouch is also estimated using a time derivative, predicting where the temperature will be in 2 seconds based on the rate of temperature change inside the pouch when the heater is active. This state estimation helps in turning off the heater if the temperature is rising up quickly beyond the deadband difference near the setpoint.</p>
+												</blockquote>
+												<span class="pp-source">From my final report, Section 4.5 (p. 11)</span>
+												<blockquote class="pp-excerpt">
+													<p>The heater is controlled using a relay controlled by a closed-loop on/off controller. The error signal is computed as the difference between the user-defined setpoint and the filtered temperature gathered by the BME280 sensor. The relay turns off when the sensed temperature nears the setpoint and thus turns off the heater that is connected to the relay.</p>
+												</blockquote>
+												<span class="pp-source">From my final report, Section 4.6 (p. 11)</span>
+											</details>
+
+											<p class="pp-todo"><strong>TODO:</strong> Adapt &sect;3.2.2 (p. 9) and &sect;3.1 (p. 6) into one short recruiter-facing paragraph naming the design decisions you personally made (predictive cutoff, hysteresis, rate-limited LCD updates) and why.</p>
+										</section>
+
+										<section class="pp-section" id="demo">
+											<h3>Demonstration</h3>
+											<p class="pp-todo"><strong>TODO:</strong> Write a short introduction to the demo (what the viewer will see and when, e.g. timestamps for the button/brightness control and the heater reaching the setpoint).</p>
+										</section>
+
+										<section class="pp-section" id="results">
+											<h3>Testing and Results</h3>
+											<p class="pp-todo"><strong>TODO:</strong> The final report does not contain a testing or results section, so no measurements are shown here. If you have data (temperature vs. time plots with the heater on/off, setpoint tracking, UDP latency, button debounce behavior), add the plots and write a few sentences on what they show.</p>
+										</section>
+
+										<section class="pp-section" id="conclusion">
+											<h3>Conclusion and Future Work</h3>
+											<blockquote class="pp-excerpt">
+												<p>The smart home controller designed as a prototype for this project is a prime example of a cyber-physical system that could eventually be implemented in a real-world home. With two microcontrollers splitting the task between user interface and temperature control, the user is able to run one subsystem wirelessly and control a separate actuator for a different subsystem through the subsystem that handles user interface. This is a robust and modular system which allows for expansion to controlling other possible home automation subsystems simultaneously and remotely.</p>
+											</blockquote>
+											<span class="pp-source">From my final report, Section 5 (p. 11)</span>
+											<blockquote class="pp-excerpt">
+												<p>A future implementation of the system would involve polling the bulb state and ensuring that the bulb state syncs properly with the system state to ensure that external changes to the bulb are reflected in the program. This would help prevent undesired behavior such as double-pressing the button to turn the light bulb on and reducing sudden brightness changes. This would also allow external users and apps to control the lights inside the home without affecting the logic of the physical control system.</p>
+											</blockquote>
+											<span class="pp-source">From my final report, Section 5 (p. 11)</span>
+										</section>
+
+									</article>
 
 								</div>
 							</div>

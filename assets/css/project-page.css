@@ -3,7 +3,7 @@
 	Loaded after main.css by projects/PiPacer.html and projects/lord_of_the_strings.html.
 	All rules are scoped under .pp-page or use a pp- prefix so nothing leaks to other pages.
 	(pp- is a historical prefix from PiPacer, the first page built on this system.)
-	Colors/fonts come from Arcana (accent #37c0fb).
+	Colors/fonts come from Arcana (accent darkolivegreen).
 */
 
 .pp-page section.pp-section { margin-bottom: 2.5em; }
@@ -38,7 +38,7 @@
 .pp-callout {
 	background: #fff;
 	border: solid 1px #e0e0e0;
-	border-left: solid 0.35em #37c0fb;
+	border-left: solid 0.35em darkolivegreen;
 	border-radius: 5px;
 	padding: 1em 1.25em 0.25em 1.25em;
 	margin-bottom: 1.5em;
@@ -70,7 +70,7 @@
 
 /* Verbatim report excerpts (used on the Smart Home Controller page) */
 .pp-page blockquote.pp-excerpt {
-	border-left: solid 0.35em #37c0fb;
+	border-left: solid 0.35em darkolivegreen;
 	background: #fff;
 	margin: 0 0 1.5em 0;
 	padding: 0.9em 1.25em 0.4em 1.25em;

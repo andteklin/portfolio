@@ -1,6 +1,6 @@
 /*
 	Shared project case-study styles for the Arcana portfolio.
-	Loaded after main.css by projects/PiPacer.html and projects/lord_of_the_strings.html.
+	Loaded after main.css by the project pages and experience.html (the latter only uses .pp-todo).
 	All rules are scoped under .pp-page or use a pp- prefix so nothing leaks to other pages.
 	(pp- is a historical prefix from PiPacer, the first page built on this system.)
 	Colors/fonts come from Arcana (accent darkolivegreen).

@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/experience-page.css" />
+		<link rel="stylesheet" href="assets/css/project-page.css" />
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -60,86 +60,60 @@
 					</div>
 				</section>
 
-			<!-- Professional Experience: Broadcom + Schindler (full-width featured sections) -->
-				<section class="wrapper style1">
-					<div class="container exp-page">
+			<!-- Broadcom (full-width featured: box post, image left) -->
+				<section class="wrapper style1" id="broadcom">
+					<div class="container">
 						<div class="row">
-
-							<!-- Broadcom -->
-							<section class="col-12" id="broadcom">
-								<div class="exp-feature">
-									<header>
-										<h3 class="exp-company">Broadcom</h3>
-										<h4 class="exp-role">Hardware Engineer Summer Contractor</h4>
-										<span class="exp-meta">June 2026 &ndash; August 2026 &middot; Allentown, PA</span>
-									</header>
-									<div class="row gtr-150">
-										<div class="col-4 col-12-narrower">
-											<div class="exp-photo-todo"><span><strong>TODO:</strong> Visual for Broadcom (e.g. a scope capture or the schematic-symbol workflow). Confirm with Broadcom that it is OK to share before adding.</span></div>
-										</div>
-										<div class="col-8 col-12-narrower">
-											<p>This past summer, I had a cool opportunity to work in the <b>APD Systems Lab</b> validating
-											ASICs for AI workloads and assisting with board prototyping and development.</p>
-											<h4 class="exp-sub">Accomplishments</h4>
-											<ul class="exp-bullets">
-												<li>Prototyped a JTAG controller using TI Programmable Real-Time Units (PRUs) on a BeagleBone in bare-metal C and assembly, benchmarking individual pipeline stages at a 40 MHz JTAG clock versus 20 MHz on Raspberry Pi</li>
-												<li>Characterized analog and digital test signals for an AI accelerator test board, using oscilloscope measurements to validate system PLL behavior across reset and operating states</li>
-												<li>Developed a deterministic schematic-symbol generation workflow for 10,000+-ball BGA-packaged ASICs in OrCAD Capture CIS, automating net-name classification and grouping to streamline ASIC-to-PCB integration</li>
-											</ul>
-										</div>
+							<section class="col-12">
+								<div class="box post">
+									<span class="image left pp-todo" style="aspect-ratio: 4 / 3; padding: 1em; text-align: center;"><strong>TODO:</strong> visual</span>
+									<div class="inner">
+										<h2 style="margin-bottom: 0.25em;">Broadcom</h2>
+										<h4 style="margin-top: 0;">Hardware Engineer Summer Contractor</h4>
+										<p><em>June 2026 &ndash; August 2026 &middot; Allentown, PA</em></p>
+										<p>This past summer, I had a cool opportunity to work in the <b>APD Systems Lab</b> validating
+											ASICs for AI workloads and assisting with board prototyping and development.
+										</p>
+										<ul>
+											<li>Prototyped a JTAG controller using TI Programmable Real-Time Units (PRUs) on a BeagleBone in bare-metal C and assembly, benchmarking individual pipeline stages at a 40 MHz JTAG clock versus 20 MHz on Raspberry Pi</li>
+											<li>Characterized analog and digital test signals for an AI accelerator test board, using oscilloscope measurements to validate system PLL behavior across reset and operating states</li>
+											<li>Developed a deterministic schematic-symbol generation workflow for 10,000+-ball BGA-packaged ASICs in OrCAD Capture CIS, automating net-name classification and grouping to streamline ASIC-to-PCB integration</li>
+										</ul>
+										<p class="pp-todo"><strong>TODO:</strong> Add a visual (e.g. scope capture or the schematic-symbol workflow). Confirm with Broadcom that it is OK to share first.</p>
+										<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
+										<p><b>Primary skills learned:</b> JTAG, TI PRU programming, bare-metal C and assembly, oscilloscope measurement, PLL characterization, OrCAD Capture CIS, workflow automation</p>
 									</div>
-									<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
-									<span class="exp-skills-label">Primary skills learned</span>
-									<ul class="exp-skills">
-										<li>JTAG</li>
-										<li>TI PRU programming</li>
-										<li>Bare-metal C &amp; assembly</li>
-										<li>Oscilloscope measurement</li>
-										<li>PLL characterization</li>
-										<li>OrCAD Capture CIS</li>
-										<li>Workflow automation</li>
-									</ul>
 								</div>
 							</section>
+						</div>
+					</div>
+				</section>
 
-							<!-- Schindler -->
-							<section class="col-12" id="schindler">
-								<div class="exp-feature">
-									<header>
-										<h3 class="exp-company">Schindler Elevator Corporation (EPCO)</h3>
-										<h4 class="exp-role">Electrical Engineer Intern</h4>
-										<span class="exp-meta">June 2025 &ndash; August 2025 &middot; Wayne, NJ</span>
-									</header>
-									<div class="row gtr-150">
-										<div class="col-8 col-12-narrower">
-											<p>At <b>EPCO (Elevator Products Corporation)</b>, I worked alongside manufacturing, engineering, and field service teams
-											to prototype a new car operating panel (COP) and streamlined validation processes for elevator position indicators (PIs).</p>
-											<h4 class="exp-sub">Accomplishments</h4>
-											<ul class="exp-bullets">
-												<li>Designed and prototyped a Raspberry Pi-based automated tester for elevator position indicators (PIs), implementing I&sup2;C/GPIO drivers, safety interlocks, and test logic in Python to replace manual validation</li>
-												<li>Developed standard wiring documentation in AutoCAD for a new elevator car operating panel, including wiring charts, work instructions, and BOMs, and validated the design across teams through a full prototype installation</li>
-												<li>Automated workflows with VBA and LISP scripts, reducing manual updates and ensuring data consistency</li>
-											</ul>
-										</div>
-										<div class="col-4 col-12-narrower">
-											<div class="exp-photo-todo"><span><strong>TODO:</strong> Visual for Schindler (e.g. the PI tester or the wiring chart). Confirm with Schindler that it is OK to share before adding.</span></div>
-										</div>
+			<!-- Schindler (full-width featured: box post, image left) -->
+				<section class="wrapper style1" id="schindler">
+					<div class="container">
+						<div class="row">
+							<section class="col-12">
+								<div class="box post">
+									<span class="image left pp-todo" style="aspect-ratio: 4 / 3; padding: 1em; text-align: center;"><strong>TODO:</strong> visual</span>
+									<div class="inner">
+										<h2 style="margin-bottom: 0.25em;">Schindler Elevator Corporation (EPCO)</h2>
+										<h4 style="margin-top: 0;">Electrical Engineer Intern</h4>
+										<p><em>June 2025 &ndash; August 2025 &middot; Wayne, NJ</em></p>
+										<p>At <b>EPCO (Elevator Products Corporation)</b>, I worked alongside manufacturing, engineering, and field service teams
+											to prototype a new car operating panel (COP) and streamlined validation processes for elevator position indicators (PIs).
+										</p>
+										<ul>
+											<li>Designed and prototyped a Raspberry Pi-based automated tester for elevator position indicators (PIs), implementing I&sup2;C/GPIO drivers, safety interlocks, and test logic in Python to replace manual validation</li>
+											<li>Developed standard wiring documentation in AutoCAD for a new elevator car operating panel, including wiring charts, work instructions, and BOMs, and validated the design across teams through a full prototype installation</li>
+											<li>Automated workflows with VBA and LISP scripts, reducing manual updates and ensuring data consistency</li>
+										</ul>
+										<p class="pp-todo"><strong>TODO:</strong> Add a visual (e.g. the PI tester or the wiring chart). Confirm with Schindler that it is OK to share first.</p>
+										<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
+										<p><b>Primary skills learned:</b> Python, Raspberry Pi, I&sup2;C/GPIO, safety interlocks, AutoCAD, Excel VBA, AutoLISP, technical documentation</p>
 									</div>
-									<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
-									<span class="exp-skills-label">Primary skills learned</span>
-									<ul class="exp-skills">
-										<li>Python</li>
-										<li>Raspberry Pi</li>
-										<li>I&sup2;C / GPIO</li>
-										<li>Safety interlocks</li>
-										<li>AutoCAD</li>
-										<li>Excel VBA</li>
-										<li>AutoLISP</li>
-										<li>Technical documentation</li>
-									</ul>
 								</div>
 							</section>
-
 						</div>
 					</div>
 				</section>
@@ -149,93 +123,77 @@
 					<div class="container">
 						<header class="major">
 							<h2>Technical Leadership &amp; Campus Experience</h2>
-							<p><span class="exp-todo">TODO: one-line subtitle</span></p>
+							<p><span class="pp-todo">TODO: one-line subtitle</span></p>
 						</header>
 					</div>
 				</section>
 
-			<!-- Cornell Cup Robotics (medium section) + compact cards -->
-				<section class="wrapper style1">
-					<div class="container exp-page">
-
-						<!-- Cornell Cup Robotics -->
-						<div class="row gtr-200" id="cornell-cup">
+			<!-- Cornell Cup Robotics (medium: photo + text columns) -->
+				<section class="wrapper style1" id="cornell-cup">
+					<div class="container">
+						<div class="row gtr-200">
 							<section class="col-5 col-12-narrower">
-								<div class="exp-photo-todo"><span><strong>TODO:</strong> Photo of you working with the Cornell Cup Robotics team.</span></div>
+								<span class="image fit pp-todo" style="aspect-ratio: 4 / 3; padding: 1em; text-align: center;"><strong>TODO:</strong> photo of you working with the Cornell Cup Robotics team</span>
 							</section>
 							<section class="col-7 col-12-narrower">
-								<h3 class="exp-company">Cornell Cup Robotics</h3>
-								<h4 class="exp-role">Subteam Lead, Electrical &amp; Computer Engineering</h4>
-								<span class="exp-meta">Jan 2025 &ndash; May 2026 &middot; Earlier: ECE Subteam Member, Feb 2024 &ndash; Dec 2024</span>
-								<p class="exp-todo"><strong>TODO:</strong> 1&ndash;2 sentences in your own words on what Cornell Cup Robotics is and what your role on the ECE subteam was.</p>
-								<h4 class="exp-sub">Accomplishments</h4>
-								<ul class="exp-bullets">
-									<li>Coordinated electrical integration for XRP-based rope-climbing and weather-reactive robots for Mt. Everest</li>
-									<li>Evaluated sub-zero performance of Maxon motor systems, Garmin watches, batteries, and resistive heating pads in collaboration with partner companies to integrate into an insulated embedded platform with real-time telemetry</li>
-									<li>Presented the Experiential Robotics Platform (XRP), an open-source education platform officially released in March 2025, to industry, academic, and government leaders in Washington, D.C., and at the FIRST Robotics Championship in Houston, TX</li>
-									<li>Led and delegated projects for the electrical systems on Bipedal Operational Bot (B.O.B.), a walking robot leveraging simulation data and VR for advanced remote operation</li>
-								</ul>
-								<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
-								<span class="exp-skills-label">Primary skills learned</span>
-								<ul class="exp-skills">
-									<li>Embedded systems</li>
-									<li>Soldering</li>
-									<li>Electrical integration</li>
-									<li>Cold-environment hardware testing</li>
-									<li>Technical presentation</li>
-									<li>Team leadership &amp; delegation</li>
-								</ul>
+								<div class="box post">
+									<div class="outer">
+										<h2 style="margin-bottom: 0.25em;">Cornell Cup Robotics</h2>
+										<h4 style="margin-top: 0;">Subteam Lead, Electrical &amp; Computer Engineering</h4>
+										<p><em>Jan 2025 &ndash; May 2026 &middot; Earlier: ECE Subteam Member, Feb 2024 &ndash; Dec 2024</em></p>
+										<p class="pp-todo"><strong>TODO:</strong> 1&ndash;2 sentences in your own words on what Cornell Cup Robotics is and what your role on the ECE subteam was.</p>
+										<ul>
+											<li>Coordinated electrical integration for XRP-based rope-climbing and weather-reactive robots for Mt. Everest</li>
+											<li>Evaluated sub-zero performance of Maxon motor systems, Garmin watches, batteries, and resistive heating pads in collaboration with partner companies to integrate into an insulated embedded platform with real-time telemetry</li>
+											<li>Presented the Experiential Robotics Platform (XRP), an open-source education platform officially released in March 2025, to industry, academic, and government leaders in Washington, D.C., and at the FIRST Robotics Championship in Houston, TX</li>
+											<li>Led and delegated projects for the electrical systems on Bipedal Operational Bot (B.O.B.), a walking robot leveraging simulation data and VR for advanced remote operation</li>
+										</ul>
+										<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
+										<p><b>Primary skills learned:</b> embedded systems, soldering, electrical integration, cold-environment hardware testing, technical presentation, team leadership and delegation</p>
+									</div>
+								</div>
 							</section>
 						</div>
+					</div>
+				</section>
 
-						<!-- Compact cards: Lab Manager + AV Support -->
-						<div class="row gtr-200">
-
+			<!-- Compact cards: Lab Manager + AV Support (same markup as the home-page experience cards) -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row">
 							<section class="col-6 col-12-narrower" id="lab-manager">
-								<div class="exp-card">
-									<h3 class="exp-company">Cornell Systems Engineering</h3>
-									<h4 class="exp-role">Lab Manager</h4>
-									<span class="exp-meta">Jan 2026 &ndash; Present &middot; Part-time &middot; Hybrid</span>
-									<p>Managing orders for the Cornell Systems Engineering Lab.</p>
-									<h4 class="exp-sub">Accomplishments</h4>
-									<ul class="exp-bullets">
-										<li>Created Google Apps Script automation to send personalized order notifications to requestors</li>
-										<li>Proposed lab organization project for better inventory management and parts access</li>
-									</ul>
-									<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
-									<span class="exp-skills-label">Primary skills learned</span>
-									<ul class="exp-skills">
-										<li>Google Apps Script</li>
-										<li>Inventory management</li>
-										<li>Order management</li>
-									</ul>
+								<div class="box post">
+									<div class="outer">
+										<h2 style="margin-bottom: 0.25em;">Cornell Systems Engineering</h2>
+										<h4 style="margin-top: 0;">Lab Manager</h4>
+										<p><em>Jan 2026 &ndash; Present &middot; Part-time &middot; Hybrid</em></p>
+										<p>Managing orders for the Cornell Systems Engineering Lab.</p>
+										<ul>
+											<li>Created Google Apps Script automation to send personalized order notifications to requestors</li>
+											<li>Proposed lab organization project for better inventory management and parts access</li>
+										</ul>
+										<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
+										<p><b>Primary skills learned:</b> Google Apps Script, inventory management, order management</p>
+									</div>
 								</div>
 							</section>
-
 							<section class="col-6 col-12-narrower" id="av-support">
-								<div class="exp-card">
-									<h3 class="exp-company">Cornell University &ndash; College of Arts and Sciences</h3>
-									<h4 class="exp-role">Audio Visual Support Assistant</h4>
-									<span class="exp-meta">Sep 2025 &ndash; Present &middot; Part-time &middot; Ithaca, NY (On-site)</span>
-									<p>Troubleshooting classroom technologies through phone calls and on-site assistance.</p>
-									<h4 class="exp-sub">Accomplishments</h4>
-									<ul class="exp-bullets">
-										<li>Support hardware bring-up and Crestron audiovisual technology configuration</li>
-										<li>Document and escalate issues through a ticketing system, ensuring clear communication and timely resolution</li>
-										<li>Troubleshoot and repair A/V systems on-site and remotely, maintaining reliable operation across 100+ classrooms</li>
-									</ul>
-									<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
-									<span class="exp-skills-label">Primary skills learned</span>
-									<ul class="exp-skills">
-										<li>Crestron</li>
-										<li>Hardware bring-up</li>
-										<li>Troubleshooting</li>
-										<li>Ticketing systems</li>
-										<li>Customer support</li>
-									</ul>
+								<div class="box post">
+									<div class="outer">
+										<h2 style="margin-bottom: 0.25em;">Audio Visual Support Assistant</h2>
+										<h4 style="margin-top: 0;">Cornell University &ndash; College of Arts and Sciences</h4>
+										<p><em>Sep 2025 &ndash; Present &middot; Part-time &middot; Ithaca, NY (On-site)</em></p>
+										<p>Troubleshooting classroom technologies through phone calls and on-site assistance.</p>
+										<ul>
+											<li>Support hardware bring-up and Crestron audiovisual technology configuration</li>
+											<li>Document and escalate issues through a ticketing system, ensuring clear communication and timely resolution</li>
+											<li>Troubleshoot and repair A/V systems on-site and remotely, maintaining reliable operation across 100+ classrooms</li>
+										</ul>
+										<!-- TODO(Andrew): confirm these skill tags are the ones you want to claim -->
+										<p><b>Primary skills learned:</b> Crestron, hardware bring-up, troubleshooting, ticketing systems, customer support</p>
+									</div>
 								</div>
 							</section>
-
 						</div>
 					</div>
 				</section>
